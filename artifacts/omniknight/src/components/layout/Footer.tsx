@@ -10,13 +10,12 @@ export default function Footer() {
           
           {/* Brand */}
           <div>
-            <Link href={ROUTES.HOME} className="flex flex-col mb-6">
-              <span className="font-bold text-2xl tracking-tight text-white leading-none">
-                OmniKnight
-              </span>
-              <span className="text-[10px] font-semibold tracking-[0.2em] text-secondary">
-                EXPRESS LAUNDRY STUDIO
-              </span>
+            <Link href={ROUTES.HOME} className="inline-flex mb-6">
+              <img
+                src="/omniknight-logo.png"
+                alt="OmniKnight Express Laundry Studio"
+                className="h-16 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
               Bengaluru's trusted express laundry and dry cleaning studio. Premium garment care with hassle-free free pickup and delivery.

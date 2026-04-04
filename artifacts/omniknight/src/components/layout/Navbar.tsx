@@ -20,13 +20,12 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md dark:bg-primary/90 dark:border-primary-foreground/10">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <Link href={ROUTES.HOME} className="flex flex-col">
-          <span className="font-bold text-2xl tracking-tight text-primary dark:text-white leading-none">
-            OmniKnight
-          </span>
-          <span className="text-[10px] font-semibold tracking-[0.2em] text-secondary">
-            EXPRESS LAUNDRY STUDIO
-          </span>
+        <Link href={ROUTES.HOME} className="flex items-center">
+          <img
+            src="/omniknight-logo.png"
+            alt="OmniKnight Express Laundry Studio"
+            className="h-14 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Nav */}
