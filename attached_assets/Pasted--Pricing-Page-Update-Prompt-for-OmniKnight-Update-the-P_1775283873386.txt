@@ -1,0 +1,32 @@
+💰 Pricing Page Update Prompt for OmniKnight
+
+Update the Pricing page (/pricing) of the OmniKnight Express Laundry Studio website with the following exact data. Keep the tabbed layout but apply OmniKnight's brand colors (Deep Navy #0D1B2A + Crimson Red #C0182A). Active tab = navy pill, inactive = light grey pill.
+
+Tab 1 — Wash & Fold
+ITEMPRICEUNITWash & Fold (5 kg – 9 kg)₹79per kgWash & Fold (5 kg)₹89per kgWash & Fold₹99per kgWash & Fold (Premium) @ 1hr₹219per kg
+
+Tab 2 — Wash & Steam Iron
+ITEMPRICEUNITWash & Steam Iron (5 kg – 9 kg)₹109per kgWash & Steam Iron (5 kg)₹119per kgWash & Steam Iron (General)₹129per kgWash & Steam Iron (Premium) @ 2hr₹249per kg
+
+Tab 3 — Dry Cleaning
+ITEMPRICEUNITLungi Dry Clean₹59per pieceT-Shirt₹59per piecePant Dry Clean₹69per pieceTop / Bottom₹69per pieceKids Frock₹99per pieceShayla Silk₹99per pieceSoft Toys (Small)₹109per pieceHoodie₹129per pieceKurta Silk₹129per pieceLadies Long Top₹129per pieceKurta Dry Clean₹141per pieceLadies 1 Piece Set₹169per pieceLadies T/B Set With Work₹169per setJacket₹177per pieceSaree Dry Clean₹177per pieceHalf Jacket₹179per pieceLehenga₹187per pieceBlazer Dry Wash & Steam₹189per pieceSilk Saree Dry Clean₹250per pieceBlazer Coat₹289per pieceCoat & Pant Set₹299per setSaree DC & Polishing₹350per pieceSaree DC & SR₹400per piece
+
+Tab 4 — Steam Ironing
+ITEMPRICEUNITKurta Steam Press₹19per pieceLungi₹19per pieceSteam Ironing₹19per pieceSteam Press₹19per pieceTowel₹19per piecePeticoat₹20per pieceShalya₹29per pieceBlouse₹30per pieceLadies Long Gown₹30per pieceWaist Coat₹30per pieceStarch Iron₹50per pieceKing Size Bed Sheet₹60per pieceSaree₹89per pieceSaree Steam Long Iron₹100per pieceBandhani Saree₹129per pieceAnarkali With Work₹215per piece
+
+Tab 5 — Household Items
+ITEMPRICEUNITPillow Cover₹29per pieceSingle Bed Sheet₹59per piecePillow₹99per pieceScreen₹120per pieceDouble Bed Sheet₹129per pieceBed Sheet (Double)₹149per pieceCurtain (8×8)₹149per pieceCurtain Dry Clean₹150per piece
+
+Footer Note (show below all tabs)
+* Prices may vary for premium/designer fabrics. Contact us for bulk orders.
+Above rates are exclusive of taxes.
+Express service is from the time laundry is in the store until exit. Pick up and drop time is not included.
+
+Design Instructions
+
+Table header row: Navy #0D1B2A background, white text
+Price column: Crimson Red #C0182A, bold
+Alternating row shading: white / very light grey
+Add a highlight banner above the tabs: "🎉 Flat 20% off on your First Order!" in crimson
+Mobile: stack tabs into a horizontal scroll, table stays readable
+Keep the "TRANSPARENT Pricing" heading style — "TRANSPARENT" in small crimson caps, "Pricing" in large navy bold
