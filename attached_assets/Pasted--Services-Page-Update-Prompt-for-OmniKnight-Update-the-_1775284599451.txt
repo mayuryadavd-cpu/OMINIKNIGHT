@@ -1,0 +1,93 @@
+🧺 Services Page Update Prompt for OmniKnight
+
+Update the Services page (/services) of the OmniKnight Express Laundry Studio website with the following content and design. Keep the same card grid layout but apply OmniKnight's brand identity.
+
+Section Header
+
+Small label above: "WHAT WE OFFER" — in Crimson Red (#C0182A), small caps, letter-spaced
+Main heading: "Our Services" — large, bold, Deep Navy (#0D1B2A)
+
+
+Hero Banner Image
+
+Full-width wide image below the heading — a professional photo of a clean, well-organized laundry/clothing store interior (neatly hung clothes, shelves, warm lighting)
+Rounded corners, slight shadow
+Can use a high-quality stock image of a premium laundry studio interior
+
+
+Service Cards Grid
+Layout: Responsive grid — 5 cards in row 1, 2 cards in row 2 (matching screenshot layout)
+Card Style: White background, soft shadow, rounded corners, icon on top, title bold navy, description small grey text — on hover: slight lift + crimson top border accent
+
+Card 1 — Wash & Fold
+
+Icon: 👕 T-shirt / laundry icon
+Title: Wash & Fold
+Description: Perfectly washed, neatly folded — ready to wear.
+Link: /pricing (Wash & Fold tab)
+
+
+Card 2 — Dry Cleaning
+
+Icon: ✨ Sparkle / hanger icon
+Title: Dry Cleaning
+Description: Premium solvent cleaning for delicate fabrics — silks, sarees, suits & more.
+Link: /pricing (Dry Cleaning tab)
+
+
+Card 3 — Steam Ironing
+
+Icon: 🔁 Steam / iron icon
+Title: Steam Ironing
+Description: Crisp, wrinkle-free finish every single time.
+Link: /pricing (Steam Ironing tab)
+
+
+Card 4 — Express Service
+
+Icon: ⚡ Lightning bolt icon
+Title: Express Service
+Description: Same-day & ultra-fast premium processing — because your time matters.
+Badge: Small crimson pill badge on card corner saying "Fast Track"
+
+
+Card 5 — Saree Pre-Pleating & Box Folding
+
+Icon: 📋 Fold / saree icon
+Title: Saree Pre-Pleating & Box Folding
+Description: Expert pleating and elegant box folding for a flawless traditional look.
+
+
+Card 6 — B2B Laundry Solutions
+
+Icon: 🏨 Building / bulk icon
+Title: B2B Laundry Solutions
+Description: Bulk laundry services for Hotels, PGs & Bus Operators.
+Badge: Small navy pill badge saying "Bulk Orders"
+
+
+Card 7 — Shoe Care
+
+Icon: 👟 Shoe icon
+Title: Shoe Care
+Description: Specialized care for all types of footwear — sneakers, leather, formal & more.
+Link: /pricing
+
+
+Below the Cards — CTA Strip
+Add a full-width crimson red banner below the grid:
+
+"Not sure which service you need? Call us or WhatsApp — we'll guide you!"
+Two buttons: 📞 Call Now (+91 97399 36399) | 💬 WhatsApp Us
+
+
+Design Instructions
+
+Background: Light grey (#F4F6F9) for the whole section
+Cards: White, rounded-xl, subtle drop shadow
+Icon color: Crimson Red #C0182A (use outline-style icons — Lucide or Feather icons)
+Title: Deep Navy #0D1B2A, 16px bold
+Description: Grey #6B7280, 13px
+Hover state: Card lifts up (translateY -4px), top border becomes 3px crimson
+Mobile: 2 cards per row, single column on very small screens
+Section label "WHAT WE OFFER": 11px, letter-spacing 2px, crimson, all caps

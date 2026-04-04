@@ -1,13 +1,28 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { COMPANY_INFO } from "@/lib/constants";
-import { Button } from "@/components/ui/button";
-import { 
-  Shirt, Droplets, Wind, Sparkles, Briefcase, ShoppingBag, 
-  CheckCircle2, ArrowRight
+import {
+  Shirt,
+  Sparkles,
+  Wind,
+  Zap,
+  Layers,
+  Building2,
+  ShoppingBag,
+  Phone,
+  MessageCircle,
 } from "lucide-react";
 
-const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) => (
+const FadeIn = ({
+  children,
+  delay = 0,
+  className = "",
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+}) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -19,113 +34,253 @@ const FadeIn = ({ children, delay = 0, className = "" }: { children: React.React
   </motion.div>
 );
 
-export default function Services() {
-  const services = [
-    {
-      id: "dry-cleaning",
-      icon: <Shirt className="w-10 h-10" />,
-      title: "Dry Cleaning",
-      desc: "Premium solvent-based cleaning for your most delicate and expensive garments. We specialize in suits, designer wear, lehengas, and bridal outfits.",
-      features: ["Eco-friendly solvents", "Stain removal experts", "Zero shrinkage guarantee", "Hand finished"]
-    },
-    {
-      id: "laundry",
-      icon: <Droplets className="w-10 h-10" />,
-      title: "Premium Laundry",
-      desc: "Everyday wash and fold or wash and iron services using industry-leading detergents that preserve fabric life and color.",
-      features: ["Color sorting", "Fabric-specific wash cycles", "Sanitized packaging", "Scent options"]
-    },
-    {
-      id: "steam-ironing",
-      icon: <Wind className="w-10 h-10" />,
-      title: "Steam Ironing",
-      desc: "Professional steam pressing that gives your clothes a crisp, wrinkle-free finish without the shine marks caused by regular irons.",
-      features: ["No shine marks", "Crisp creases", "Hanger or fold options", "Next day delivery"]
-    },
-    {
-      id: "shoes",
-      icon: <Sparkles className="w-10 h-10" />,
-      title: "Shoe Cleaning & Restoration",
-      desc: "Deep cleaning, deodorizing, and restoration for sneakers, formal shoes, and boots. We bring your favorite footwear back to life.",
-      features: ["Deep sole cleaning", "Deodorizing", "Stain treatment", "Material specific care"]
-    },
-    {
-      id: "bags-leather",
-      icon: <Briefcase className="w-10 h-10" />,
-      title: "Bag & Leather Care",
-      desc: "Specialized cleaning and conditioning for leather jackets, luxury handbags, and accessories to maintain their suppleness.",
-      features: ["Gentle cleaning", "Leather conditioning", "Color restoration", "Hardware polishing"]
-    },
-    {
-      id: "carpet-rug",
-      icon: <ShoppingBag className="w-10 h-10" />,
-      title: "Carpet & Rug Cleaning",
-      desc: "Industrial-grade extraction cleaning that removes deep-seated dust, allergens, and stains from your home textiles.",
-      features: ["Deep extraction", "Odor removal", "Fringe detailing", "Allergen reduction"]
-    },
-    {
-      id: "curtains",
-      icon: <Wind className="w-10 h-10" />,
-      title: "Curtain Cleaning",
-      desc: "Thorough cleaning for drapes and curtains, removing accumulated dust and restoring their original vibrant look.",
-      features: ["Pleat preservation", "Dust mite removal", "Shrinkage control", "Gentle handling"]
-    },
-    {
-      id: "woolens",
-      icon: <Shirt className="w-10 h-10" />,
-      title: "Woolen & Blanket Care",
-      desc: "Gentle wash cycles and specific detergents designed to clean heavy winter wear and blankets without causing matting or shrinkage.",
-      features: ["Moth-proofing options", "Softness retention", "Large capacity washing", "Seasonal packing"]
-    }
-  ];
+type ServiceCard = {
+  icon: React.ReactNode;
+  title: string;
+  desc: string;
+  badge?: { label: string; color: "crimson" | "navy" };
+  pricingTab?: string;
+};
+
+const services: ServiceCard[] = [
+  {
+    icon: <Shirt className="w-7 h-7" />,
+    title: "Wash & Fold",
+    desc: "Perfectly washed, neatly folded — ready to wear.",
+    pricingTab: "wash-fold",
+  },
+  {
+    icon: <Sparkles className="w-7 h-7" />,
+    title: "Dry Cleaning",
+    desc: "Premium solvent cleaning for delicate fabrics — silks, sarees, suits & more.",
+    pricingTab: "dry-clean",
+  },
+  {
+    icon: <Wind className="w-7 h-7" />,
+    title: "Steam Ironing",
+    desc: "Crisp, wrinkle-free finish every single time.",
+    pricingTab: "steam-iron",
+  },
+  {
+    icon: <Zap className="w-7 h-7" />,
+    title: "Express Service",
+    desc: "Same-day & ultra-fast premium processing — because your time matters.",
+    badge: { label: "Fast Track", color: "crimson" },
+  },
+  {
+    icon: <Layers className="w-7 h-7" />,
+    title: "Saree Pre-Pleating & Box Folding",
+    desc: "Expert pleating and elegant box folding for a flawless traditional look.",
+  },
+  {
+    icon: <Building2 className="w-7 h-7" />,
+    title: "B2B Laundry Solutions",
+    desc: "Bulk laundry services for Hotels, PGs & Bus Operators.",
+    badge: { label: "Bulk Orders", color: "navy" },
+  },
+  {
+    icon: <ShoppingBag className="w-7 h-7" />,
+    title: "Shoe Care",
+    desc: "Specialized care for all types of footwear — sneakers, leather, formal & more.",
+    pricingTab: "household",
+  },
+];
+
+function ServiceCardItem({ service, index }: { service: ServiceCard; index: number }) {
+  const badgeBg =
+    service.badge?.color === "crimson"
+      ? { backgroundColor: "#C0182A", color: "#fff" }
+      : { backgroundColor: "#0D1B2A", color: "#fff" };
 
   return (
-    <div className="bg-gray-50 pb-24">
+    <FadeIn delay={index * 0.07}>
+      <div
+        className="relative bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col gap-4 transition-all duration-300 cursor-default group"
+        style={{ borderTop: "3px solid transparent" }}
+        onMouseEnter={(e) => {
+          (e.currentTarget as HTMLDivElement).style.borderTopColor = "#C0182A";
+          (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)";
+          (e.currentTarget as HTMLDivElement).style.boxShadow =
+            "0 12px 30px rgba(0,0,0,0.10)";
+        }}
+        onMouseLeave={(e) => {
+          (e.currentTarget as HTMLDivElement).style.borderTopColor = "transparent";
+          (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
+          (e.currentTarget as HTMLDivElement).style.boxShadow =
+            "0 1px 3px rgba(0,0,0,0.05)";
+        }}
+      >
+        {/* Badge */}
+        {service.badge && (
+          <span
+            className="absolute top-4 right-4 text-xs font-bold px-2.5 py-1 rounded-full"
+            style={badgeBg}
+          >
+            {service.badge.label}
+          </span>
+        )}
+
+        {/* Icon */}
+        <div
+          className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
+          style={{ backgroundColor: "#fff0f1", color: "#C0182A" }}
+        >
+          {service.icon}
+        </div>
+
+        {/* Text */}
+        <div>
+          <h3
+            className="font-bold text-base mb-1 leading-snug"
+            style={{ color: "#0D1B2A" }}
+          >
+            {service.title}
+          </h3>
+          <p className="text-sm leading-relaxed" style={{ color: "#6B7280" }}>
+            {service.desc}
+          </p>
+        </div>
+
+        {/* Link */}
+        {service.pricingTab && (
+          <Link
+            href="/pricing"
+            className="text-xs font-semibold mt-auto self-start flex items-center gap-1 transition-opacity hover:opacity-70"
+            style={{ color: "#C0182A" }}
+          >
+            View Pricing
+            <span>&rarr;</span>
+          </Link>
+        )}
+      </div>
+    </FadeIn>
+  );
+}
+
+export default function Services() {
+  return (
+    <div className="pb-24 min-h-screen" style={{ backgroundColor: "#F4F6F9" }}>
       {/* Page Header */}
-      <section className="bg-primary text-white pt-24 pb-20 px-4 text-center">
+      <section
+        className="pt-24 pb-16 px-4 text-center"
+        style={{ backgroundColor: "#0D1B2A" }}
+      >
         <FadeIn>
-          <h1 className="text-4xl md:text-6xl font-bold font-serif mb-6">Our Services</h1>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Comprehensive garment care solutions using European technology and eco-friendly products for exceptional results.
+          <p
+            className="text-xs font-bold uppercase tracking-[0.25em] mb-3"
+            style={{ color: "#C0182A" }}
+          >
+            What We Offer
+          </p>
+          <h1
+            className="text-4xl md:text-6xl font-bold mb-5"
+            style={{ color: "#ffffff", fontFamily: "'Poppins', sans-serif" }}
+          >
+            Our Services
+          </h1>
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: "rgba(255,255,255,0.7)" }}>
+            Comprehensive garment care using European technology and eco-friendly products — 
+            from everyday laundry to premium dry cleaning.
           </p>
         </FadeIn>
       </section>
 
-      {/* Services Grid */}
-      <section className="container mx-auto px-4 -mt-10 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {services.map((service, idx) => (
-            <FadeIn key={service.id} delay={idx * 0.1}>
-              <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col h-full group hover:shadow-xl transition-all duration-300">
-                <div className="p-8 flex-1">
-                  <div className="w-16 h-16 rounded-2xl bg-primary/5 text-primary flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4 font-serif">{service.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-8">{service.desc}</p>
-                  
-                  <div className="grid grid-cols-2 gap-y-3 mb-8">
-                    {service.features.map((feature, i) => (
-                      <div key={i} className="flex items-center gap-2 text-sm text-foreground/80">
-                        <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
+      {/* Hero Banner */}
+      <div className="container mx-auto px-4 -mt-4 mb-12">
+        <FadeIn>
+          <div
+            className="rounded-2xl overflow-hidden shadow-lg flex items-center justify-between px-10 py-8 gap-6 relative"
+            style={{
+              background: "linear-gradient(120deg, #0D1B2A 60%, #1a2f46 100%)",
+              minHeight: 160,
+            }}
+          >
+            {/* Left: tagline */}
+            <div className="relative z-10">
+              <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "#C0182A" }}>
+                Premium Garment Care
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-white leading-snug" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                Trusted by 5,000+ families<br />across Bengaluru
+              </h2>
+              <p className="text-white/60 mt-2 text-sm max-w-sm">
+                European-grade machines · Eco-friendly solvents · Express 1-hr turnaround
+              </p>
+            </div>
+            {/* Right: stat pills */}
+            <div className="hidden sm:flex gap-4 relative z-10">
+              {[
+                { value: "15+", label: "Services" },
+                { value: "5★", label: "Rated" },
+                { value: "48hr", label: "Turnaround" },
+              ].map((s) => (
+                <div
+                  key={s.label}
+                  className="flex flex-col items-center justify-center rounded-xl px-5 py-4"
+                  style={{ backgroundColor: "rgba(255,255,255,0.07)", minWidth: 90 }}
+                >
+                  <span className="text-2xl font-bold" style={{ color: "#C0182A" }}>{s.value}</span>
+                  <span className="text-xs text-white/50 mt-0.5">{s.label}</span>
                 </div>
-                
-                <div className="px-8 py-6 bg-gray-50 border-t border-gray-100 mt-auto">
-                  <a href={`${COMPANY_INFO.whatsappLink}?text=Hi, I would like to get a quote for ${service.title} services.`} target="_blank" rel="noopener noreferrer" className="block">
-                    <Button variant="outline" className="w-full justify-between group/btn border-gray-200 hover:border-secondary hover:bg-secondary/5 hover:text-secondary">
-                      Get a Quote
-                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </Button>
-                  </a>
-                </div>
-              </div>
-            </FadeIn>
+              ))}
+            </div>
+            {/* Decorative circles */}
+            <div className="absolute right-0 top-0 w-48 h-48 rounded-full opacity-5" style={{ background: "#C0182A", transform: "translate(30%, -30%)" }} />
+            <div className="absolute right-24 bottom-0 w-32 h-32 rounded-full opacity-5" style={{ background: "#ffffff", transform: "translateY(40%)" }} />
+          </div>
+        </FadeIn>
+      </div>
+
+      {/* Service Cards Grid */}
+      <section className="container mx-auto px-4">
+        {/* Row 1: 5 cards */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 mb-5">
+          {services.slice(0, 5).map((service, idx) => (
+            <ServiceCardItem key={idx} service={service} index={idx} />
           ))}
         </div>
+        {/* Row 2: 2 cards centered */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-5 max-w-2xl mx-auto">
+          {services.slice(5).map((service, idx) => (
+            <ServiceCardItem key={idx + 5} service={service} index={idx + 5} />
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Strip */}
+      <section className="container mx-auto px-4 mt-14">
+        <FadeIn>
+          <div
+            className="rounded-2xl px-8 py-10 text-white text-center shadow-lg"
+            style={{ backgroundColor: "#C0182A" }}
+          >
+            <p className="text-xl md:text-2xl font-bold mb-2">
+              Not sure which service you need?
+            </p>
+            <p className="text-white/80 mb-8 text-base">
+              Call us or WhatsApp — we'll guide you to the right solution.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={`tel:${COMPANY_INFO.phone}`}
+                className="flex items-center gap-2 bg-white font-semibold px-7 py-3.5 rounded-xl text-base transition-opacity hover:opacity-90"
+                style={{ color: "#C0182A" }}
+              >
+                <Phone className="w-4 h-4" />
+                Call Now
+              </a>
+              <a
+                href={COMPANY_INFO.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 border-2 border-white text-white font-semibold px-7 py-3.5 rounded-xl text-base transition-opacity hover:opacity-90"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+        </FadeIn>
       </section>
     </div>
   );
