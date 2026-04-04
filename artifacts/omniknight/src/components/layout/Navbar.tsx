@@ -10,6 +10,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const navLinks = [
+    { label: "About", href: ROUTES.ABOUT },
     { label: "Services", href: ROUTES.SERVICES },
     { label: "Pricing", href: ROUTES.PRICING },
     { label: "Why Us", href: ROUTES.WHY_US },

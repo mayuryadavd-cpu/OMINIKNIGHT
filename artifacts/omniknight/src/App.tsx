@@ -6,6 +6,7 @@ import { ROUTES } from "@/lib/constants";
 
 import Layout from "@/components/layout/Layout";
 import Home from "@/pages/Home";
+import About from "@/pages/About";
 import Services from "@/pages/Services";
 import Pricing from "@/pages/Pricing";
 import WhyUs from "@/pages/WhyUs";
@@ -19,6 +20,7 @@ function Router() {
   return (
     <Switch>
       <Route path={ROUTES.HOME} component={Home} />
+      <Route path={ROUTES.ABOUT} component={About} />
       <Route path={ROUTES.SERVICES} component={Services} />
       <Route path={ROUTES.PRICING} component={Pricing} />
       <Route path={ROUTES.WHY_US} component={WhyUs} />

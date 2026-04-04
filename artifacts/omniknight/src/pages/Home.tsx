@@ -257,6 +257,76 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Founders Teaser */}
+      <section className="py-20 px-4" style={{ backgroundColor: "#F4F6F9" }}>
+        <div className="container mx-auto max-w-4xl">
+          <FadeIn className="text-center mb-12">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] mb-2" style={{ color: "#C0182A" }}>
+              Our Team
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: "#0D1B2A", fontFamily: "'Poppins', sans-serif" }}>
+              Meet The Founders
+            </h2>
+            <p className="text-sm" style={{ color: "#6B7280" }}>
+              The people behind OmniKnight's mission to redefine laundry in Bengaluru.
+            </p>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+            {[
+              {
+                initials: "BL",
+                name: "Bhagya Lakshmi",
+                role: "Founder",
+                bg: "linear-gradient(135deg, #0D1B2A 0%, #1e3a5f 100%)",
+                desc: "Operational expert driving OmniKnight's vision and business strategy.",
+              },
+              {
+                initials: "MP",
+                name: "Mithun Padmanabhan",
+                role: "Co-Founder",
+                bg: "linear-gradient(135deg, #1a2f46 0%, #0D1B2A 100%)",
+                desc: "Growth specialist with Ola and MakeMyTrip experience fuelling our expansion.",
+              },
+            ].map((f, i) => (
+              <FadeIn key={i} delay={i * 0.15}>
+                <div
+                  className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300"
+                  onMouseEnter={(e) => {
+                    const el = e.currentTarget as HTMLDivElement;
+                    el.style.transform = "translateY(-4px)";
+                    el.style.boxShadow = "0 12px 32px rgba(192,24,42,0.10)";
+                  }}
+                  onMouseLeave={(e) => {
+                    const el = e.currentTarget as HTMLDivElement;
+                    el.style.transform = "translateY(0)";
+                    el.style.boxShadow = "";
+                  }}
+                >
+                  <div className="h-36 flex items-center justify-center text-white text-5xl font-bold" style={{ background: f.bg }}>
+                    {f.initials}
+                  </div>
+                  <div className="px-5 py-3" style={{ background: "linear-gradient(90deg, #0D1B2A 0%, #C0182A 100%)" }}>
+                    <p className="font-bold text-white">{f.name}</p>
+                    <p className="text-white/70 text-xs">{f.role}</p>
+                  </div>
+                  <div className="px-5 py-4">
+                    <p className="text-sm text-center" style={{ color: "#374151" }}>{f.desc}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn className="text-center">
+            <Link href={ROUTES.ABOUT} className="inline-flex items-center gap-1.5 text-sm font-semibold transition-opacity hover:opacity-70" style={{ color: "#C0182A" }}>
+              Learn More About Us
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/5" />

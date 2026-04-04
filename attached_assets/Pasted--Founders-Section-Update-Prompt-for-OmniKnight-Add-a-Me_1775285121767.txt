@@ -1,0 +1,57 @@
+👥 Founders Section Update Prompt for OmniKnight
+
+Add a "Meet The Founders" section to the About Us page (/about) of the OmniKnight Express Laundry Studio website with the following content. Change the card color from purple to OmniKnight's brand colors (Deep Navy #0D1B2A + Crimson Red #C0182A).
+
+Section Header
+
+Small label above: "OUR TEAM" — Crimson Red (#C0182A), small caps, letter-spaced
+Main heading: "Meet The Founders" — large, bold, Deep Navy (#0D1B2A)
+
+
+Founder Cards Layout
+2 cards side by side (stack vertically on mobile)
+Each card structure:
+
+Photo on top (portrait style, rounded top corners, no background)
+Name + Role in a colored banner below the photo
+Description text below the banner
+
+
+Founder 1 — Bhagya Lakshmi
+
+Photo: Use the uploaded photo of Bhagya Lakshmi
+Name: Bhagya Lakshmi
+Role: Founder
+Name Banner Color: Deep Navy (#0D1B2A) gradient to Crimson (#C0182A) — left to right
+Description: Strategic partner ensuring smooth operations and driving the startup's vision with expertise in operational management and business development.
+
+
+Founder 2 — Mithun Padmanabhan
+
+Photo: Use the uploaded photo of Mithun Padmanabhan
+Name: Mithun Padmanabhan
+Role: Co-Founder
+Name Banner Color: Same — Deep Navy to Crimson gradient
+Description: Business development expert with experience in mobility, e-commerce & travel sectors. Formerly with Ola and MakeMy Trip, driving growth and innovation.
+
+
+Card Design Instructions
+
+Card background: White, rounded-2xl, soft drop shadow
+Photo: Centered above the banner, slightly overlapping top of banner (like a floating portrait effect)
+Name: Bold, white, 18px
+Role: Light white/grey, 13px, below name
+Description: Dark grey #374151, 14px, centered, padding on sides
+Hover effect: Card lifts slightly, banner gets a subtle crimson glow
+On mobile: Cards stack full width, one below the other
+
+
+Section Background
+
+Light grey #F4F6F9 — same as Services section for visual consistency
+
+
+Placement
+
+Place this section on the About Us page, below the company story/mission section and above the footer
+Can also add a condensed 2-founder strip on the Home page as a teaser with a "Learn More About Us →" link

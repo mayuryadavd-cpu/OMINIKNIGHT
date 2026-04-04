@@ -17,6 +17,7 @@ export const COMPANY_INFO = {
 
 export const ROUTES = {
   HOME: "/",
+  ABOUT: "/about",
   SERVICES: "/services",
   PRICING: "/pricing",
   WHY_US: "/why-us",
