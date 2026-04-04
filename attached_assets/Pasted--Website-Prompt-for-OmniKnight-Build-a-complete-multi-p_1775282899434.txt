@@ -1,0 +1,96 @@
+🌐 Website Prompt for OmniKnight
+
+Build a complete multi-page website for "OmniKnight Express Laundry Studio" — a premium laundry and dry cleaning service based in Bengaluru, India. Domain: omniknight.in
+
+🎨 Brand & Design Style
+
+Brand Name: OmniKnight Express Laundry Studio
+Logo: Text-based — "OmniKnight" bold + "EXPRESS LAUNDRY STUDIO" in smaller caps beneath
+Color Palette: Deep Navy Blue (#0D1B2A) as primary, Crimson Red (#C0182A) as accent, White and light grey for backgrounds
+Typography: Clean modern sans-serif — Inter or Poppins
+Design Feel: Premium, trustworthy, modern Indian service brand — similar to Tumbledry but with a darker, more sleek and bold aesthetic
+Style Difference from reference: Use card-based glassmorphism sections, subtle dark gradient hero, animated counters for stats, and icon-forward service tiles instead of image-heavy layout
+
+
+📄 Pages to Build
+1. 🏠 Home Page (/)
+Sections:
+
+Sticky Header/Navbar: Logo left | Nav links: Services, Pricing, Why Us, Locate Us, Contact | CTA button: "Schedule Pickup" (crimson red)
+Hero Section: Dark navy gradient background, headline: "Bengaluru's Trusted Laundry & Dry Clean Experts", subheadline about express service + free pickup & delivery, two CTA buttons: "Book a Pickup" + "WhatsApp Us", floating badge: "Serving Chamrajpet & surrounding areas"
+Trust Stats Bar: Animated counters — Happy Customers | Services Offered | Cities Served | Years of Experience
+Services Grid: Icon cards for each service category (6–8 tiles in a responsive grid)
+How It Works: 3-step visual process — Schedule Pickup → We Clean → Free Delivery
+Why OmniKnight: USP cards — Express Turnaround, Eco-Friendly Products, Free Pickup & Delivery, Expert Handling, Affordable Pricing
+Testimonials: Carousel/slider with customer reviews
+App / Booking CTA Banner: "Book your pickup in 60 seconds" with WhatsApp + Phone CTA
+Footer: Logo, nav links, contact info, social icons, copyright "© 2025 OmniKnight Express Laundry Studio | omniknight.in"
+
+
+2. 🧺 Services Page (/services)
+Dedicated sections for:
+
+Dry Cleaning (clothes, suits, lehengas, bridal wear)
+Laundry (wash & fold, wash & iron)
+Shoe Cleaning & Restoration
+Bag & Leather Cleaning
+Carpet & Rug Cleaning
+Curtain Cleaning
+Woolen & Blanket Care
+Soft Toys Cleaning
+Steam Ironing
+
+Each service: Icon + Title + Short description + "Get Quote" button
+
+3. 💰 Pricing Page (/pricing)
+
+Clean tabbed layout — tabs for: Laundry | Dry Clean | Specialty Items
+Pricing table with item name, price range, turnaround time
+Note: "Final price confirmed at pickup based on fabric & embroidery"
+Highlight banner: "Flat 20% off on your first order!"
+
+
+4. ✅ Why Us Page (/why-us)
+
+Technology used (eco-friendly solvents, professional machines)
+Process quality (stain removal, zero shrinkage guarantee)
+Hygiene standards (WHO/CDC compliant)
+Expert staff with specialized training
+Customer satisfaction guarantee
+
+
+5. 📍 Locate Us Page (/locate-us)
+
+Embedded Google Map centered on: 3rd floor, Venkat Square, #156, Puttanachetty Road, Chamrajpet, Bengaluru, Karnataka - 560018
+Service area coverage list (Chamrajpet, Basavanagudi, Jayanagar, etc.)
+Pickup & delivery radius info
+
+
+6. 📞 Contact Us Page (/contact)
+
+Contact form: Full Name, Email, Phone Number, Message → "Send Message" button (crimson)
+Contact details panel:
+
+📞 Phone: +91 97399 36399
+💬 WhatsApp: Chat with us (link to wa.me)
+📍 Address: 3rd floor, Venkat Square, #156, Puttanachetty Road, Chamrajpet, Bengaluru, Karnataka-560018
+🕐 Business Hours: Mon–Sun: 9:00 AM – 9:00 PM | Pickup-Delivery: 9:00 AM – 5:00 PM
+
+
+Embedded Google Map
+Design change from screenshot: Use a split dark/light card layout — dark navy left panel for contact info, white right panel for the form, instead of the plain white layout in the screenshot
+
+
+📱 Technical Requirements
+
+Fully responsive (mobile-first)
+WhatsApp floating button (bottom right, always visible)
+Smooth scroll animations (fade-in on scroll)
+SEO meta tags for each page (title, description, keywords targeting Bengaluru laundry)
+Fast-loading, minimal dependencies
+Google Maps embed for store location
+HTML/CSS/JS or React — single codebase preferred
+
+
+🔑 Key Info to Use Across Site
+FieldValueBrandOmniKnight Express Laundry StudioDomainomniknight.inPhone+91 97399 36399WhatsApp+91 97399 36399Address3rd Floor, Venkat Square, #156, Puttanachetty Road, Chamrajpet, Bengaluru, KA 560018HoursMon–Sun: 9 AM – 9 PMPickup-Delivery9 AM – 5 PM

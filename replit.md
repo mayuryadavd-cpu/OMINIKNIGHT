@@ -16,6 +16,18 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
 
+## Artifacts
+
+### OmniKnight Express Laundry Studio (`artifacts/omniknight`)
+- React + Vite static frontend, no backend needed
+- 6 pages: Home, Services, Pricing, Why Us, Locate Us, Contact
+- Brand: Deep Navy (#0D1B2A) primary, Crimson Red (#C0182A) accent
+- Fonts: Inter + Poppins (loaded via HTML link tag in index.html)
+- Routing: wouter
+- Animations: framer-motion
+- WhatsApp floating CTA (+91 97399 36399)
+- Google Maps embed for store location
+
 ## Key Commands
 
 - `pnpm run typecheck` — full typecheck across all packages
