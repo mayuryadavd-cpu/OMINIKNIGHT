@@ -14,7 +14,7 @@ export default function Footer() {
               <img
                 src="/omniknight-logo.png"
                 alt="OmniKnight Express Laundry Studio"
-                className="h-16 w-auto object-contain brightness-0 invert"
+                className="h-16 w-auto object-contain"
               />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
@@ -39,6 +39,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               <li><Link href={ROUTES.HOME} className="text-white/70 hover:text-secondary transition-colors">Home</Link></li>
               <li><Link href={ROUTES.SERVICES} className="text-white/70 hover:text-secondary transition-colors">Our Services</Link></li>
+              <li><Link href={ROUTES.ABOUT} className="text-white/70 hover:text-secondary transition-colors">About Us</Link></li>
               <li><Link href={ROUTES.PRICING} className="text-white/70 hover:text-secondary transition-colors">Pricing</Link></li>
               <li><Link href={ROUTES.WHY_US} className="text-white/70 hover:text-secondary transition-colors">Why Choose Us</Link></li>
               <li><Link href={ROUTES.LOCATE_US} className="text-white/70 hover:text-secondary transition-colors">Locate Us</Link></li>
@@ -58,7 +59,12 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                <p className="text-white/90">{COMPANY_INFO.email}</p>
+                <a
+                  href={`mailto:${COMPANY_INFO.email}`}
+                  className="text-white/90 hover:text-secondary transition-colors"
+                >
+                  {COMPANY_INFO.email}
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
