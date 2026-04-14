@@ -8,8 +8,7 @@ id = "artifacts/mockup-sandbox"
 
 [deployment]
 router = "application"
-deploymentTarget = "static"
-publicDir = "ominiknight.in"
+deploymentTarget = "cloudrun"
 
 [deployment.postBuild]
 args = ["pnpm", "store", "prune"]
